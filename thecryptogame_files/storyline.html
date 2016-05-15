@@ -1,0 +1,163 @@
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> The CryptoGame | Storyline </title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="Cryptography game suspense thriller interactive fiction text-based ">
+	<meta name="description" content="The CryptoGame is an interactive fictional suspense thriller based on Cryptography. 14 Challenges, 1 Mystery, and you have to investigate, solve and unravel the mystery behind sudden Disappearance of Mr. Wright.">
+	<meta name="author" content="Manan Singh">
+
+	<link rel="shortcut icon" href="images/favicon.ico">
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- 
+		SETUP COMMON CSS & JS FILES 
+	-->
+	<script type="text/javascript" src="lib/jquery-1.12.1.min.js"></script>
+
+	<!-- setup materialize.-->
+	<!-- 1. import google icon font -->
+		<!-- for offline case -->
+	<link rel="stylesheet" href="lib/materialize/iconfont/material-icons.css">
+		<!-- or, if online 
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		-->
+	<!-- 2. import materialize.css -->
+	<link rel="stylesheet" href="lib/materialize/css/materialize.min.css" media="screen,projection">
+	<!-- 3. import materilize.js (make sure jquery has already been included) -->
+	<script type="text/javascript" src="lib/materialize/js/materialize.min.js"></script>
+
+	<script type="text/javascript" src="lib/validate.min.js"></script>
+
+
+	<!-- my js: some greet functions; text resize on copy paste, etc.-->
+	<script type="text/javascript" src="lib/my/main.js"></script>
+	<link rel="stylesheet" href="lib/my/main.css">
+</head>
+<body>
+
+<!-- 
+	Code Begins 
+-->
+
+
+<div class="container">
+	<div class="row center-align">
+		<a href="home.html" style="color:#d32f2f">&larr; Back</a> 
+		<h3>Storyline</h3>
+		<p class="flow-text">14 Challenges. 1 Mystery. </p>
+	
+	</div>
+	
+
+	<!-- Listing of storyline cards. -->
+	<div class="row">
+		<div id="render_all_chapters" class="col offset-s1 s10">
+				
+		</div>
+	</div>
+</div>
+
+
+<script>
+	$(document).ready(function() {
+		
+		//check if localStorage available or not.
+	  	if(typeof(Storage) !== "undefined") {
+		    // Code for localStorage/sessionStorage. (is available)
+
+		    //Case 1: User opens app for first time. not registered already.
+		    if(!localStorage.user){	//no username
+		    	//redirect to first page
+		    	window.location.href = "index.html";
+		    }
+
+		    //Case 2: User already stored in localStorage.
+		    else{	//username registered already.
+
+		    	//render_all_chapters.
+		    	render_all_chapters();
+		    }
+
+
+
+		} else {
+		    // Sorry! No Web Storage support..
+		    var msg = "<div class='center-align' style='margin:3em'> : (<br><br>Cannot run the App.<br><br>'localStorage' feature Not Found. <br><br>Use a Newer version of the Web Browser.<br><br></div>";
+		    $("body").html(msg);
+		}
+
+
+	});
+
+// Function to render the main contents.
+function render_all_chapters(){
+
+	/* 
+		our array of all items
+	*/
+	var items = new Array(	['Chapter 0: Welcome aboard!','s0-welcome.html'], 
+						['Chapter 1: Disappearance of Mr. Wright','s1-disapp.html'],
+						['Chapter 2: The Mysterious Glimmer','s2-mist.html'],
+						['Chapter 3: The Old Style', 's3-oldie.html'],
+						['Chapter 4: The Waiter\'s Tip', 's4-wtip.html'],
+						['Chapter 5: Hidden in Plainsight', 's5-textstegno.html'],
+						['Chapter 6: Underworld', 's6-underw.html'],
+						['Chapter 7: Know Anything?', 's7-addr.html'],
+						['Chapter 8: Dumpster Diving', 's8-trash.html'],
+						['Chapter 9: Another Curious Case', 's9-what.html'],
+						['Chapter 10: Interception', 's10-intercep.html'],
+						['Chapter 11: Open the door!!', 's11-opensesame.html'],
+						['Chapter 12: Unbelievable Report', 's12-reporting.html'],
+						['Chapter 13: Finished', 's13-completed.html'],
+						['Chapter 14: Beyond the Known', 's14-unknown.html'] 
+					);	
+				//format meaning: ['display_name','file_name', 'item_color']
+	
+	var output = '<ul class="collection">';
+	for(var i=0; i<items.length; i++)
+	{
+		if(i <=localStorage.progress){
+			output += render_item(items[i][0], items[i][1], "0");			//0 -> unlocked, 1 -> locked
+		}else{
+			output += render_item(items[i][0],"", "1");				//no file_name  passed, when locked.
+		}
+	}
+	output += '</ul>';
+	$("#render_all_chapters").html(output);
+
+}
+
+function render_item(display_name, file_name, locked){	
+	var item_html = "";
+	if(! parseInt(locked)){	
+		item_html += '<li class="collection-item card"><div>' + display_name;
+		item_html += '<a href="'+ file_name +'"  class="secondary-content" style="color:#d34141;"> <i class="material-icons">send</i></a>';
+		item_html += '</div></li>';
+	}else{
+		item_html += '<li class="collection-item" style="background-color:#eee"><div>' + display_name;
+		item_html += '<a style="color:#aaa;" class="secondary-content"><i class="material-icons">lock</i></a>';
+		item_html += '</div></li>';
+	}
+	return item_html;
+} 
+</script>
+
+<!-- 
+	Code Ends 
+-->
+
+	
+
+
+</body>
+</html>

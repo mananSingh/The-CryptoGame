@@ -1,0 +1,229 @@
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> The CryptoGame </title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="Cryptography game suspense thriller interactive fiction text-based ">
+	<meta name="description" content="The CryptoGame is an interactive fictional suspense thriller based on Cryptography. 14 Challenges, 1 Mystery, and you have to investigate, solve and unravel the mystery behind sudden Disappearance of Mr. Wright.">
+	<meta name="author" content="Manan Singh">
+
+	<link rel="shortcut icon" href="images/favicon.ico">
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- 
+		SETUP COMMON CSS & JS FILES 
+	-->
+	<script type="text/javascript" src="lib/jquery-1.12.1.min.js"></script>
+
+	<!-- setup materialize.-->
+	<!-- 1. import google icon font -->
+		<!-- for offline case -->
+	<link rel="stylesheet" href="lib/materialize/iconfont/material-icons.css">
+		<!-- or, if online 
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		-->
+	<!-- 2. import materialize.css -->
+	<link rel="stylesheet" href="lib/materialize/css/materialize.min.css" media="screen,projection">
+	<!-- 3. import materilize.js (make sure jquery has already been included) -->
+	<script type="text/javascript" src="lib/materialize/js/materialize.min.js"></script>
+
+	<script type="text/javascript" src="lib/validate.min.js"></script>
+
+
+	<!-- my js: some greet functions; text resize on copy paste, etc.-->
+	<script type="text/javascript" src="lib/my/main.js"></script>
+	<link rel="stylesheet" href="lib/my/main.css">
+</head>
+<body>
+<!-- 
+	Code Begins 
+-->
+
+
+<div class="container">
+	<div class="row center-align">
+		<a href="storyline.html" style="color:#d32f2f">&larr; Back</a>
+		<br>	
+		<h4>Chapter 1: Disappearance of Mr. Wright</h4>
+	</div>
+
+	<!-- my comments-->
+	<div class="row">
+		<div class="col offset-s1 s10">
+			<br>
+
+			<strong>Previously: </strong>You successfully joined the Agil's Cryptography division for summer internship.<br><br><br>
+
+			Next day, you get your first assignment letter.<br><br>
+
+			You are very excited but also become nervous as you read the contents.
+
+		</div>
+	</div>
+	<br>
+
+	<!-- letter head of company -->
+	<div class="lined-paper-bg z-depth-1">
+
+		<!-- letter head -->		
+		<div class="row">
+	<div class="col offset-s1 s2">
+		<img class="responsive-img" src="images/agillogo.png">
+	</div>
+
+	<!-- date -->
+	<div class="col s6 center-align">
+		<br>
+		A G I L &nbsp;&nbsp; I n v e s t i g a t i o n  &nbsp; &nbsp; I n c .<br>
+		Spellborough, U.K.<br><br>
+	</div>
+
+<!-- this be completed in another file -->			<div class="col s6 center-align">
+				4 May, 2009
+			</div>
+
+		</div>
+		<!-- letter head  Ended-->
+
+
+		<div class="row">
+
+			<div class="divider offset-s1 col s10 teal"></div><br>
+
+			<div class="col offset-s2 s8 right-align">
+				Assignment #1
+			</div>
+
+			<div class="col offset-s2 s8" style="text-align:justify">
+
+				<br>
+				<strong>OBJECTIVE</strong>: Decipher the message.<br><br>
+				<strong>DESCRIPTION</strong>: Our client Mrs. Tamsyn Wright has reported her husband missing from longer than a week. She has a letter that he has written to her, but the contents of that letter are cryptic to her senses, as they are encrypted using Caesar Cipher. We have found the related information necessary to decrypt that code, and have mentioned that below. Your task is to submit to us the original message after decryption.<br> <br>
+				<strong>CIPHER INFO</strong>: Caesar Cipher. Key: 13. <br>
+			</div>
+		</div>
+
+		
+		<div class="row">
+			<div class="col offset-s2 s8">
+				<br>
+				<em>Encl. (2)</em><br>
+
+				<ol>
+					<li>Partial Statement report of Mrs. Wright.</li>
+					<li>Letter from Mr. Wright to his wife.</li>
+				</ol>
+
+				<br>
+			</div>
+		</div>
+	</div>	<!-- company letter ended -->
+
+	<br>
+
+	<!-- letter head of company -->
+	<div class="lined-paper-bg z-depth-1">
+		<div class="row">
+
+			<div class="col offset-s1 s10 left-align">
+				<strong>CLIENT STATEMENT REPORT</strong><br>
+				Client Name: Mrs. Tamsyn Wright<br>
+				Client Address: 5B, 10th Street, Starrybourne<br>
+				Date: 3 May, 2009<br>
+			</div>
+
+			<div class="col offset-s2 s8" style="text-align:justify">
+				<br>
+					...<br>
+					"On 21st April, my husband told me that he had to go out urgently on an interstate meeting. (He is a freelance cryptographer and provides consultancy to clients.) At that time, he assured me of his return in three days, but it has been more than a week, and there is no sign of him except a letter that he sent on 22nd.<br>
+					Partial contents of his letter are possibly encrypted, and make no sense to me."<br>
+					...
+				<br>
+			</div>
+		</div>
+	</div>	<!-- company letter ended -->
+
+	<br>
+
+
+	<!-- letter head of company -->
+	<div class="lined-paper-bg z-depth-1">
+		<div class="row">
+			<div class="col offset-s8 s2">22 April, 2009</div>
+			<div class="col offset-s2 s8 left-align">
+				Dear Tamsyn,<br>
+				Yesterday, I had to hastily leave out of town due to a surprise meeting, and so, was unable to describe to you the details of this trip. I am very sorry for that. Regretfully, I cannot share those details even now, as the gravity of the matters surrounding this trip have dramatically increased today.<br>
+				Don't worry though, as I will surely return back before our anniversary on 26th, and we'll celebrate at the Laurel's.<br>
+				Take care.<br><br>
+				
+				With love.<br>
+				Yours forever,<br>
+				Thomas Wright<br><br>
+
+				P.S.<br>
+				Just-in-case:<br>
+			</div>
+			<div class="col offset-s3 s6">
+				<span class="red lighten-4">
+				JURA GVZR PBZRF, NAQ LBH ZNL ARRQ<br>
+				JURA GURL PBZR UHAGVAT, BHG BS TERRQ<br>
+				QBA'G TB NYBAR, SBE GURL NER PERRQ<br>
+				WHFG BCRA OBBX NAQ PNERSHYYL ERNQ<br>
+				</span>
+			</div>
+		</div>
+	</div>	<!-- company letter ended -->
+
+	<!-- my comments-->
+	<br><br>
+	<div class="row">
+		<div class="col offset-s1 s10">
+			What could possibly be written in that encrypted text? His whereabouts? Some note? Just a prank? or, some Warning?!<br><br>
+
+			Time to find out yourself. (Hint: Use the Caesar Tool from <a target="_blank" href="cryptolab.html" style="color:teal">Cryptolab</a>)<br>
+		</div>
+	</div>
+
+
+	<!-- dummy challenge -->
+	<div class="row">
+		<br>
+		<div class="input-field col offset-s1 s10">
+            <textarea id="solution" class="materialize-textarea" placeholder=""></textarea>
+            <label for="solution">Solution</label>
+        </div>
+
+	    <!-- button -->
+	    <div class="col offset-s1 s10 center-align">
+		    <a id="submit-btn" class="btn-floating btn-large waves-effect waves-light red accent-2 tooltipped" data-position="right" data-delay="50" data-tooltip="Submit"><i class="material-icons">done</i></a>
+		
+		<br><br>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- JS containing all the solutions -->
+<script src="lib/my/solutions.js"></script>
+<script>var chapter = 1;</script>
+<script src="lib/my/game-mechanics.js"></script>
+
+<!-- 
+	Code Ends 
+-->
+
+	
+
+
+</body>
+</html>

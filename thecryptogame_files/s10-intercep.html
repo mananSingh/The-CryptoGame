@@ -1,0 +1,248 @@
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> The CryptoGame </title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="Cryptography game suspense thriller interactive fiction text-based ">
+	<meta name="description" content="The CryptoGame is an interactive fictional suspense thriller based on Cryptography. 14 Challenges, 1 Mystery, and you have to investigate, solve and unravel the mystery behind sudden Disappearance of Mr. Wright.">
+	<meta name="author" content="Manan Singh">
+
+	<link rel="shortcut icon" href="images/favicon.ico">
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- 
+		SETUP COMMON CSS & JS FILES 
+	-->
+	<script type="text/javascript" src="lib/jquery-1.12.1.min.js"></script>
+
+	<!-- setup materialize.-->
+	<!-- 1. import google icon font -->
+		<!-- for offline case -->
+	<link rel="stylesheet" href="lib/materialize/iconfont/material-icons.css">
+		<!-- or, if online 
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		-->
+	<!-- 2. import materialize.css -->
+	<link rel="stylesheet" href="lib/materialize/css/materialize.min.css" media="screen,projection">
+	<!-- 3. import materilize.js (make sure jquery has already been included) -->
+	<script type="text/javascript" src="lib/materialize/js/materialize.min.js"></script>
+
+	<script type="text/javascript" src="lib/validate.min.js"></script>
+
+
+	<!-- my js: some greet functions; text resize on copy paste, etc.-->
+	<script type="text/javascript" src="lib/my/main.js"></script>
+	<link rel="stylesheet" href="lib/my/main.css">
+</head>
+<body>
+<!-- 
+	Code Begins 
+-->
+
+
+<div class="container">
+	<div class="row center-align">
+		<a href="storyline.html" style="color:#d32f2f">&larr; Back</a>
+		<br>	
+		<h4>Chapter 10: Interception</h4>
+	</div>
+
+	<!-- my comments-->
+	<div class="row">
+		<div class="col offset-s1 s10">
+			<br>
+			<strong>Previously: </strong>The investigations of disappearance of Mr. Wright led to a shadowy organization called COATIS. While the investigations regarding the case continued, you witnessed a strange case in which a client's digital files were encrypted automatically with a strong cryptographic mechanism; and the client was asked for a huge amount of money to decrypt her files.<br><br>
+
+			You never thought that cryptography could be harmful to anyone, and here it is - an unusual case!<br><br>
+
+			Who could have encrypted those files? Who owns the secret RSA private key which the previous report talked about?<br><br>
+
+			And, what about the investigation regarding COATIS? What did they made out of the IP address that you decrypted?<br><br>
+
+			After few days of wait, your next assignment comes. Possibly, A big revelation awaits ahead.
+
+		</div>
+	</div>
+	<br>
+
+	<!-- letter head of company -->
+	<div class="lined-paper-bg z-depth-1">
+
+		<!-- letter head -->		
+		<div class="row">
+	<div class="col offset-s1 s2">
+		<img class="responsive-img" src="images/agillogo.png">
+	</div>
+
+	<!-- date -->
+	<div class="col s6 center-align">
+		<br>
+		A G I L &nbsp;&nbsp; I n v e s t i g a t i o n  &nbsp; &nbsp; I n c .<br>
+		Spellborough, U.K.<br><br>
+	</div>
+
+<!-- this be completed in another file -->			<div class="col s6 center-align">
+				18 May, 2009
+			</div>
+
+		</div>
+		<!-- letter head  Ended-->
+
+
+		<div class="row">
+
+			<div class="divider offset-s1 col s10 teal"></div><br>
+
+			<div class="col offset-s2 s8 right-align">
+				Assignment #10
+			</div>
+
+			<div class="col offset-s2 s8" style="text-align:justify">
+
+				<br>
+				<strong>OBJECTIVE</strong>: Decrypt the Message.<br><br>
+				<strong>DESCRIPTION</strong>: It's been quite some time since we assigned you any challenge. But finally, here it is - a very important one. Read carefully.<br>
+				The IP address of COATIS indeed turned out to be a very crucial piece of information. Our cyber security personnels worked hard as the IP itself was non functional, but after a series of highly intelligent efforts, they traced it to the original IP of COATIS.<br>
+				The delay in your assignment was also, in part, due to these efforts. Further, we needed the permissions of the court for our next step. It also took laborious legal efforts and lengthy time. But in the end, we got the permissions and  took the necesary step. We intercepted the emails of COATIS, and now have those in our possession.<br>
+				We have sent to you one of those emails, but it is encrypted using DES. The message containing the DES key itself, is encrypted using RSA. The details are attached herewith.<br>
+				Decrypt the RSA message, Get the DES key, Decrypt the DES email, and submit the plaintext to us soon.
+				<br> <br>
+				<strong>CIPHER INFO</strong>: DES for plaintext. RSA for key <br>
+			</div>
+		</div>
+
+		
+		<div class="row">
+			<div class="col offset-s2 s8">
+				<br>
+				<em>Encl. (2)</em><br>
+
+				<ol>
+					<li>Email encrypted using DES.</li>
+					<li>The RSA-encrypted Message containing the DES key.</li>
+				</ol>
+
+				<br>
+			</div>
+		</div>
+	</div>	<!-- company letter ended -->
+
+	<br>
+
+	<!-- letter head of company -->
+	<div class="lined-paper-bg z-depth-1">
+		<div class="row">
+
+			<div class="col offset-s1 s10 left-align">
+				<strong>EVIDENCE</strong><br>
+				TYPE: DES Encrypted Email<br>
+				Date: 18 May, 2009<br>
+			</div>
+
+			<div class="col offset-s2 s8" style="text-align:justify; word-wrap: break-word;">
+				<br>
+					<span class="red lighten-4">
+					g4oeFNxkgzxKOtJIH/zilBM1AYxv28X8TAfRO1wQP2Zg+lu6TbiH3yfy4foFPKiZOabsqAI3Kh4WpVGUXm8MOBgXARXl84HEstXsZxDiZDo/jmJLEOjAWtLJQiW/VBBz0ubLTyDwMuLIDr8SXb28nV1E8brT1uscUcORcr67X58rsz2M19iov3n3RVu6i8mm+nLVuDzutUuP6eyhWmxTcPXBVbv4gCG7Gga8jPpGw/knXKjz8UtttsBGI24QDvW0Ny7iW5SHKpF3DFJhv76S4HTlSAQgrpbFDaQ46x92NhbS81wJD9vAd6d1hhYEkxuMs+YnP7mJAmO5kqA5rfkZGlI6rUAFyJWCWmZ25XXhm2bzeO15YYOTgyVUvfwx+E4PcecGbiIuMX0bs5KvK5KMe6LZHUe/kGW0Tw3YlqfopjIcc+6G26j0T8WnxYG43NlYfeqKDVb35e6PHpK+dCTy9r+74rJTs+hVX3//HR5gQjL6OAfuf1IQdaTSv4RxhPPEr5XcO+bQvpX9W5oX1t5MrGeKlcXHaxWO/UfLDinQC2QfhPJSYLylffVED24cDnazqnTLlEXJ46U9oOOpdkSCe0exttMV+m3OyJvuNjVyqL/mALpaWSOaVIuq3kiKAkeAVaXtys0rhV920/Js+RkcZFi8JGi8ZKVMCWoop7+CSOgGIScCs4wVZ8IdtzbKsYJepLlg8FfrvY9+xsMKsVqjTn1hgqz2uWE0TlXKEBdeLZ8Kfe1WXjyPes8aqa8kWPe3590OXbkNktz1PVO0EbD8dKzQ0wffaZM8zjSs4f2a4M90ph9wueRalRtOPzsKbGxnUCq9m1ktWyDlbRzIfxrxaHr7H5bj4yu2Rd/KzE3RrKJlUQbzaMchcuI5cmpRVE1hj2zDTWG5Hx+MAyWFp3VsBijp30uQ131sd4VB2sl0dE6wRhZfuJiSWELTdlWz9iCZJzO1WqQS+FOiupo0z4quB867DHUvrvveu++4YyBQX1TP/dpnd1IV+R5KzJfpepWfVYlna0nM7jlP6pRa8D4v+xL0uDKap0IDmzWmv5dF86Su5bXopaU1j10PGUrMjUpglcDxczyQdmcl94Sw/8DZGnq1XETKTdUCFl+ZeFzenSUwpm5efyAvd0k12sPrtjtE0yU8XhTlrVsMvvU0LRfYg99faEpsaHgfq7SkFESMjgKdXxTZXypy5CNfxsVrgxZpKn6U4CYM44xYkKRy9IXPKCwFfgTetvWxOggPTS3Bc9Xn3PSmhIPdz3NaSoV5m5RkufeZm1QRKoL2Fvukmgf4xA==
+					</span>
+				<br>
+			</div>
+		</div>
+	</div>	<!-- company letter ended -->
+
+	<br>
+
+	<!-- letter head of company -->
+	<div class="lined-paper-bg z-depth-1">
+		<div class="row">
+
+			<div class="col offset-s1 s10 left-align">
+				<strong>EVIDENCE</strong><br>
+				TYPE: RSA Encrypted Message Containing the DES Key<br>
+				Date: 18 May, 2009<br>
+			</div>
+
+			<div class="col offset-s2 s8" style="text-align:justify; word-wrap: break-word;">
+				<br>
+					<span class="red lighten-4">
+					2ZqVCu0LtO-KkwD:UPIUIao^1P[b(y@
+					</span>
+				<br>
+			</div>
+			<br>
+			<div class="col offset-s2 s8" style="text-align:justify; word-wrap: break-word;">
+				<br>
+					RSA Private Key (to decrypt above):<br>
+					Exponent:<br>
+					<span class="red lighten-4">
+					960579666006549817560236322319983030053924297595951478922705
+					</span><br>
+					Modulus:<br>
+					<span class="red lighten-4">
+					1058059960185402366316160067497052659354567879221060758600659
+					</span>
+				<br>
+			</div>
+		</div>
+	</div>	<!-- company letter ended -->
+
+	<br>
+
+
+	<!-- my comments-->
+	<br><br>
+	<div class="row">
+		<div class="col offset-s1 s10">
+			Private emails of COATIS!!!<br><br>
+
+			Certainly, it would have their deepest and darkest secrets.<br><br>
+
+			Let's decrypt.
+			<br>
+		</div>
+	</div>
+
+
+	<!-- dummy challenge -->
+	<div class="row">
+		<br>
+		<div class="input-field col offset-s1 s10">
+            <textarea id="solution" class="materialize-textarea" placeholder=""></textarea>
+            <label for="solution">Solution</label>
+        </div>
+
+	    <!-- button -->
+	    <div class="col offset-s1 s10 center-align">
+		    <a id="submit-btn" class="btn-floating btn-large waves-effect waves-light red accent-2 tooltipped" data-position="right" data-delay="50" data-tooltip="Submit"><i class="material-icons">done</i></a>
+		
+		<br><br>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- JS containing all the solutions -->
+<script src="lib/my/solutions.js"></script>
+<script>var chapter = 10;</script>
+<script src="lib/my/game-mechanics.js"></script>
+
+
+<!-- 
+	Code Ends 
+-->
+
+	
+
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> The CryptoGame | Cryptolab</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="Cryptography game suspense thriller interactive fiction text-based ">
+	<meta name="description" content="The CryptoGame is an interactive fictional suspense thriller based on Cryptography. 14 Challenges, 1 Mystery, and you have to investigate, solve and unravel the mystery behind sudden Disappearance of Mr. Wright.">
+	<meta name="author" content="Manan Singh">
+
+	<link rel="shortcut icon" href="images/favicon.ico">
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- 
+		SETUP COMMON CSS & JS FILES 
+	-->
+	<script type="text/javascript" src="lib/jquery-1.12.1.min.js"></script>
+
+	<!-- setup materialize.-->
+	<!-- 1. import google icon font -->
+		<!-- for offline case -->
+	<link rel="stylesheet" href="lib/materialize/iconfont/material-icons.css">
+		<!-- or, if online 
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		-->
+	<!-- 2. import materialize.css -->
+	<link rel="stylesheet" href="lib/materialize/css/materialize.min.css" media="screen,projection">
+	<!-- 3. import materilize.js (make sure jquery has already been included) -->
+	<script type="text/javascript" src="lib/materialize/js/materialize.min.js"></script>
+
+	<script type="text/javascript" src="lib/validate.min.js"></script>
+
+
+	<!-- my js: some greet functions; text resize on copy paste, etc.-->
+	<script type="text/javascript" src="lib/my/main.js"></script>
+	<link rel="stylesheet" href="lib/my/main.css">
+</head>
+<body>
+
+<!-- 
+	Code Begins 
+-->
+
+<div class="container">
+	<div class="row center-align">
+		<a href="home.html" style="color:#00838f">&larr; Back</a>
+		<h3>CryptoLab</h3>
+		<p class="flow-text">Read the posts. Interact with tools.<br> Discover the techniques. and Enjoy.</p>
+	</div>
+
+	<!-- Listing/index/cloud of tools -->
+	<div class="row center-align">
+		<div id="render_all_items" class="col s12">
+	
+		</div>
+	</div>
+</div>
+
+<script>
+	$(document).ready(function() {
+		
+		//check if localStorage available or not.
+	  	if(typeof(Storage) !== "undefined") {
+		    // Code for localStorage/sessionStorage. (is available)
+
+		    //Case 1: User opens app for first time. not registered already.
+		    if(!localStorage.user){	//no username
+		    	//redirect to first page
+		    	window.location.href = "index.html";
+		    }
+
+		    //Case 2: User already stored in localStorage.
+		    else{	//username registered already.
+
+		    	//render_all_chapters.
+		    	render_all_items();
+		    }
+
+
+
+		} else {
+		    // Sorry! No Web Storage support..
+		    var msg = "<div class='center-align' style='margin:3em'> : (<br><br>Cannot run the App.<br><br>'localStorage' feature Not Found. <br><br>Use a Newer version of the Web Browser.<br><br></div>";
+		    $("body").html(msg);
+		}
+
+
+	});
+
+// Function to render the main contents.
+function render_all_items(){
+
+	/* 
+		our array of all items
+	*/
+	var items = new Array(['Crypto 101','c0-crypto.html', 'cyan darken-2'],
+					['Caesar Cipher','c1-caesar.html', 'cyan darken-3'],
+					['Brute Force Caesar','c2-brute-caesar.html', 'cyan darken-3'],
+					['Atbash Cipher','c3-atbash.html', 'cyan darken-4'],
+					['Morse Code','c4-morse.html', 'cyan darken-4'],
+					['One Time Pad','c5-otp.html', 'cyan darken-3'],
+					['Vigenere Cipher','c6-vigenere.html', 'cyan darken-3'],
+					['Book Cipher','c7-book-cipher.html', 'cyan darken-2'],
+					['Steganography','c8-stego.html', 'cyan darken-2'],
+					['Rail Fence Cipher','c9-railfence.html', 'cyan darken-3'],
+					['World of Bits','c10-bits.html', 'light-blue darken-1'],
+					['Text to Bits','c10-text2bits.html', 'light-blue darken-2'],
+					['Bits to Hex','c10-bits2hex.html', 'light-blue darken-2'],
+					['Bits to Base64','c10-bits2base64.html', 'light-blue darken-2'],
+					['XOR Cipher','c11-xor.html', 'light-blue darken-2'],
+					['Rivest Cipher 4 (Mini)','c12-rc4-mini.html', 'light-blue darken-3'],
+					['Rivest Cipher 4','c12-rc4.html', 'light-blue darken-3'],
+					['Random Generator','c12-random.html', 'light-blue darken-2'],
+					['DES (Modes Of Operation)','c13-des-modes.html', 'light-blue darken-3'],
+					['DES (How Works?)','c13-des-block.html', 'light-blue darken-2'],
+					['RSA (Public Key Cryptography)','c14-rsa.html', 'indigo'],
+					['Hashes','c15-hashes.html', 'purple'],
+					['Crack MD5 Hash','c16-crack-md5-hash.html', 'purple darken-2']);	
+					//format meaning: ['display_name','file_name', 'item_color']
+	
+	/*
+		our array of progress-to-items mapping
+	*/
+	var progress_to_items = new Array(1,4,5,6,8,9,10,17,17,20,21,23,23,23,23);	//meaning, when progress[0] = unlock 2 items, when progress[1] = unlock 3 items, etc.. to progress[14] (or whatever is max).
+
+
+	var output = '';
+	for(var i=0; i<items.length; i++)
+	{
+		if(i < progress_to_items[localStorage.progress]){
+			output += render_item(items[i][0], items[i][1], "0", items[i][2]);			//0 -> unlocked, 1 -> locked
+		}else{
+			output += render_item(items[i][0],"", "1", "");				//no file_name or color passed, when locked.
+		}
+	}
+	output += '</ul>';
+	$("#render_all_items").html(output);
+
+}
+
+function render_item(display_name, file_name, locked, item_color){	
+	var item_html = "";
+	if(! parseInt(locked)){		
+		item_html += '<a href="' + file_name + '" class="chip '+ item_color +' btn waves-effect waves-light" style="margin:10px; color:#fff">'+ display_name +'</a>&nbsp;&nbsp;';
+	}else{
+		item_html += '<a class="chip btn disabled" style="margin:10px">' + display_name +'<i class="material-icons">lock</i></a>&nbsp;&nbsp;';
+	}
+	return item_html;
+} 
+</script>
+
+
+
+<!-- 
+	Code Ends 
+-->
+
+	
+
+
+</body>
+</html>

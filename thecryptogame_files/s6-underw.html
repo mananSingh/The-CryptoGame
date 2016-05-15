@@ -1,0 +1,194 @@
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> The CryptoGame </title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="Cryptography game suspense thriller interactive fiction text-based ">
+	<meta name="description" content="The CryptoGame is an interactive fictional suspense thriller based on Cryptography. 14 Challenges, 1 Mystery, and you have to investigate, solve and unravel the mystery behind sudden Disappearance of Mr. Wright.">
+	<meta name="author" content="Manan Singh">
+
+	<link rel="shortcut icon" href="images/favicon.ico">
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- 
+		SETUP COMMON CSS & JS FILES 
+	-->
+	<script type="text/javascript" src="lib/jquery-1.12.1.min.js"></script>
+
+	<!-- setup materialize.-->
+	<!-- 1. import google icon font -->
+		<!-- for offline case -->
+	<link rel="stylesheet" href="lib/materialize/iconfont/material-icons.css">
+		<!-- or, if online 
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		-->
+	<!-- 2. import materialize.css -->
+	<link rel="stylesheet" href="lib/materialize/css/materialize.min.css" media="screen,projection">
+	<!-- 3. import materilize.js (make sure jquery has already been included) -->
+	<script type="text/javascript" src="lib/materialize/js/materialize.min.js"></script>
+
+	<script type="text/javascript" src="lib/validate.min.js"></script>
+
+
+	<!-- my js: some greet functions; text resize on copy paste, etc.-->
+	<script type="text/javascript" src="lib/my/main.js"></script>
+	<link rel="stylesheet" href="lib/my/main.css">
+</head>
+<body>
+<!-- 
+	Code Begins 
+-->
+
+
+<div class="container">
+	<div class="row center-align">
+		<a href="storyline.html" style="color:#d32f2f">&larr; Back</a>
+		<br>	
+		<h4>Chapter 6: Underworld</h4>
+	</div>
+
+	<!-- my comments-->
+	<div class="row">
+		<div class="col offset-s1 s10">
+			<br>
+			<strong>Previously: </strong>An warning like announcement was hidden in the message sent to the Police. Now what?<br><br><br>
+
+			Just one hour later, you get another assignment, but this time you are asked to encrypt something.
+
+		</div>
+	</div>
+	<br>
+
+	<!-- letter head of company -->
+	<div class="lined-paper-bg z-depth-1">
+
+		<!-- letter head -->		
+		<div class="row">
+	<div class="col offset-s1 s2">
+		<img class="responsive-img" src="images/agillogo.png">
+	</div>
+
+	<!-- date -->
+	<div class="col s6 center-align">
+		<br>
+		A G I L &nbsp;&nbsp; I n v e s t i g a t i o n  &nbsp; &nbsp; I n c .<br>
+		Spellborough, U.K.<br><br>
+	</div>
+
+<!-- this be completed in another file -->			<div class="col s6 center-align">
+				11 May, 2009
+			</div>
+
+		</div>
+		<!-- letter head  Ended-->
+
+
+		<div class="row">
+
+			<div class="divider offset-s1 col s10 teal"></div><br>
+
+			<div class="col offset-s2 s8 right-align">
+				Assignment #6
+			</div>
+
+			<div class="col offset-s2 s8" style="text-align:justify">
+
+				<br>
+				<strong>OBJECTIVE</strong>: Encrypt the Message.<br><br>
+				<strong>DESCRIPTION</strong>: The previous message have been taken very seriously by the Police department, and they have tasked us to investigate the existence of Coatis in detail. But our intelligence reports are unable to find much info. We have only one option left, and that is to contact one of the sources in the Underworld.<br>
+				Known only by the alias 'Foma', he/she is a cranky cryptographer, and is crazy in his/her methods and demands. He/she only accepts encrypted requests and sends back the responses in encrypted form as well. But as I mentioned already, this is our only chance. So, you need to encrypt our request message, and submit to us quickly, so that we can contact him/her as soon as possible.<br>
+				<br> <br>
+				<strong>CIPHER INFO</strong>: Rail Fence Cipher. Key: 5 <br>
+			</div>
+		</div>
+
+		
+		<div class="row">
+			<div class="col offset-s2 s8">
+				<br>
+				<em>Encl. (1)</em><br>
+
+				<ol>
+					<li>Original Message to be encrypted.</li>
+				</ol>
+
+				<br>
+			</div>
+		</div>
+	</div>	<!-- company letter ended -->
+
+	<br>
+
+	<!-- letter head of company -->
+	<div class="lined-paper-bg z-depth-1">
+		<div class="row">
+
+			<div class="col offset-s2 s8" style="text-align:justify">
+				<br>
+					<span class="red lighten-4">
+						Dear Foma,<br>
+						We need your aid urgently. Give as much info as you can, about the pseudonym COATIS - its details, description, people, address - anything. Sooner the reply, the better will be the reward.<br>
+						-Agil
+					</span>
+				<br>
+			</div>
+		</div>
+	</div>	<!-- company letter ended -->
+
+	<br>
+
+
+	<!-- my comments-->
+	<br><br>
+	<div class="row">
+		<div class="col offset-s1 s10">
+			Strange! Contacting the underworld!<br><br>
+
+			Let's do this.
+			<br>
+		</div>
+	</div>
+
+
+	<!-- dummy challenge -->
+	<div class="row">
+		<br>
+		<div class="input-field col offset-s1 s10">
+            <textarea id="solution" class="materialize-textarea" placeholder=""></textarea>
+            <label for="solution">Solution</label>
+        </div>
+
+	    <!-- button -->
+	    <div class="col offset-s1 s10 center-align">
+		    <a id="submit-btn" class="btn-floating btn-large waves-effect waves-light red accent-2 tooltipped" data-position="right" data-delay="50" data-tooltip="Submit"><i class="material-icons">done</i></a>
+		
+		<br><br>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- JS containing all the solutions -->
+<script src="lib/my/solutions.js"></script>
+<script>var chapter = 6;</script>
+<script src="lib/my/game-mechanics.js"></script>
+
+<!-- 
+	Code Ends 
+-->
+
+	
+
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> The CryptoGame </title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="Cryptography game suspense thriller interactive fiction text-based ">
+	<meta name="description" content="The CryptoGame is an interactive fictional suspense thriller based on Cryptography. 14 Challenges, 1 Mystery, and you have to investigate, solve and unravel the mystery behind sudden Disappearance of Mr. Wright.">
+	<meta name="author" content="Manan Singh">
+
+	<link rel="shortcut icon" href="images/favicon.ico">
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- 
+		SETUP COMMON CSS & JS FILES 
+	-->
+	<script type="text/javascript" src="lib/jquery-1.12.1.min.js"></script>
+
+	<!-- setup materialize.-->
+	<!-- 1. import google icon font -->
+		<!-- for offline case -->
+	<link rel="stylesheet" href="lib/materialize/iconfont/material-icons.css">
+		<!-- or, if online 
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		-->
+	<!-- 2. import materialize.css -->
+	<link rel="stylesheet" href="lib/materialize/css/materialize.min.css" media="screen,projection">
+	<!-- 3. import materilize.js (make sure jquery has already been included) -->
+	<script type="text/javascript" src="lib/materialize/js/materialize.min.js"></script>
+
+	<script type="text/javascript" src="lib/validate.min.js"></script>
+
+
+	<!-- my js: some greet functions; text resize on copy paste, etc.-->
+	<script type="text/javascript" src="lib/my/main.js"></script>
+	<link rel="stylesheet" href="lib/my/main.css">
+</head>
+<body>
+<!-- 
+	Code Begins 
+-->
+
+
+<div class="container">
+	<div class="row center-align">
+		<a href="storyline.html" style="color:#d32f2f">&larr; Back</a>
+		<br>	
+		<h4>Chapter 12: Unbelievable Report</h4>
+	</div>
+
+	<!-- my comments-->
+	<div class="row">
+		<div class="col offset-s1 s10">
+			<br>
+			<strong>Previously: </strong>The Police and the investigators raided the COATIS headquarter and found huge evidence of their cyber crime activities. An official arrest warrant have been issued for everyone involved. Is everything solved now? Is Mr. Wright found or arrested?<br><br><br>
+
+			You feel proud as you have just cracked a password hash. But you noticed something strange!<br><br>
+
+			The password "Warthog_Smith" is an anagram of "Thomas_Wright". Can this mean something? Does some mystery remain unravelled even now?<br><br>
+
+			The next day, early morning, you get another assignment - an encrypted report.
+		</div>
+	</div>
+	<br>
+
+	<!-- letter head of company -->
+	<div class="lined-paper-bg z-depth-1">
+
+		<!-- letter head -->		
+		<div class="row">
+	<div class="col offset-s1 s2">
+		<img class="responsive-img" src="images/agillogo.png">
+	</div>
+
+	<!-- date -->
+	<div class="col s6 center-align">
+		<br>
+		A G I L &nbsp;&nbsp; I n v e s t i g a t i o n  &nbsp; &nbsp; I n c .<br>
+		Spellborough, U.K.<br><br>
+	</div>
+
+<!-- this be completed in another file -->			<div class="col s6 center-align">
+				19 May, 2009
+			</div>
+
+		</div>
+		<!-- letter head  Ended-->
+
+
+		<div class="row">
+
+			<div class="divider offset-s1 col s10 teal"></div><br>
+
+			<div class="col offset-s2 s8 right-align">
+				Assignment #12
+			</div>
+
+			<div class="col offset-s2 s8" style="text-align:justify">
+
+				<br>
+				<strong>OBJECTIVE</strong>: Decrypt the Message.<br><br>
+				<strong>DESCRIPTION</strong>: Great Job! The password that you cracked indeed helped us and the Police to reach the server room in time, and stop the remote execution of virus on hundreds of computers worldwide. That server room was their Command and Control (C&amp;C) Center, and used mutliple servers in parallel to hack encrypt the remote files of victims. The RSA private key to decrypt victims' files was also found there; and has now been successfully retrieved and sent to all the victims to restore their files. You did a wonderful job of aiding us to find and catch such dangerous criminals. You will be definitely rewarded for this soon.<br>
+				Another point needs to be made here. And that is the connection of Mr. Wright with this case. Firstly: In retrospect, the early riddles left by Mr. Wright and the morse code stranger make perfect sense now. It seems as they were legitimate warnings against the Cyber ransom criminals.  Secondly: Since the disappearance of Mr. Wright, the trail of clues that we received, played a crucial role in taking us closer to the cyber crime group COATIS. Thirdly: Mr. Wright's name itself, was alleged in the private emails of COATIS as one of their members. These all facts sound a little paradoxical. Anyway, since, an arrest warrant has been issued for him as well, we sent one of our investigator yesterday to his home for another survey and his capture, if found.<br>
+				He was expected to reply to us simply by call or by a plaintext message, but unusually, he has sent a report encrypted using DES in CBC mode. As one of your last assignments, please decrypt that report, and submit soon. We can't wait to read his findings.
+				<br> <br>
+				<strong>CODE INFO</strong>: DES, Mode-of-operation: CBC (Cipher Block Chaining) <br>
+			</div>
+		</div>
+
+		
+		<div class="row">
+			<div class="col offset-s2 s8">
+				<br>
+				<em>Encl. (1)</em><br>
+
+				<ol>
+					<li>DES Ciphertext, the Key and the Initialization String.</li>
+				</ol>
+
+				<br>
+			</div>
+		</div>
+	</div>	<!-- company letter ended -->
+
+	<br>
+
+	<!-- letter head of company -->
+	<div class="lined-paper-bg z-depth-1">
+		<div class="row">
+
+			<div class="col offset-s1 s10 left-align">
+				<strong>REPORT</strong><br>
+				TYPE: DES Ciphertext, the Key and the Initialization String<br>
+				FROM: The Investigator who went to Mr. Wright's house<br>
+				Date: 19 May, 2009<br>
+			</div>
+
+			<div class="col offset-s2 s8" style="text-align:justify; word-wrap: break-word;">
+				<br>
+					Ciphertext: <br>
+					<span class="red lighten-4">
+					roX+H5rKHJvKkqZK++hRaBBpdxLxoQpiPHgOC12xG/fFgTUT9GTpX8bBw5jK41+rpWtt5yeMyyZOOj3wiyFURf5xeNUn7qB02y4r5PMFOicx8DsGrbcwN3PX8oxvzX2fYMriIy2psN/C4lmU10eSEeM4x2OgUZ13n0fHMhviPEx7kGPoEfcoVwtiaLsJy3UcCFihpZbG00b+wdmv3RkZhM9fYlGw97Gl6ExVI4zVhQfArF0FRFMQSc37Rkd/NmtaWFyp34kWP0qXATgnCh8hyC4X1j7c52Vv2YtnWBekGGzbHkckmygTAXCxjRdU+0M4IpTOc4pKaGjzDJ6lZrWVB9z99roDmI7Jh8DVjrGNc74ye7+v0nlnfY3w+Ps6tlo3ng0jfJkxJn8CYbPALChPMEL7NVLbqlTZj67o+MBV/c/Vf8WR6k2m2MSEe8fn6XXaHkLm1lzzIlE6foVjs3V9qW/P3mYkx37BTBRaXLASwcrbMtKAT8xgenn7cwlt1PJx+0YrrCrRFA6/PPM3NBcS2TogXO1s4KivxAbPhD+/rgNrNpJuARHtW8kdAvOxWX8I0f1shgzfYrWkml5b1+3DcOGxM2o0ebSp/IG0tZyGs0ErRXX6zQLvOCQqYTUyqqfBqD+lh/O559/oqWwWz5SrdTk99O3h0ncC6woAVG9M9O2JcyxavNNFzKexPce1qEuHeyFo1+RsqmChBdQ9ZVOvdxeW3NOdyR82Qpffbcmoycd4GMaWb0kQ4HOKsunrKtZL8XDs4c/p36cQvfmR+uyyi7BHADgoa1RKqDFEd4Q3qRmSLR96MGSotpfd0EvJmpIgZ6XLjiC1ywInP2R59GaSUf6+bHe/pRF9BOlKmYGrHcXSmZWVRrgfWdkKarvFwm6GVMimeu6QNgRREqZ1HQMQi6dfgO3W6aQdqCjQdCdOqzfWG3EwHwe9YghWPGChy72Plk9nrT4R1FtHD97srJZLZ7aIJX89q7L2I6SHp1c8x9E2qu4g+4qS915B0fa4JmLZ+UE2Dps9tLLNfAxtqol7QQLbfX/g1mpnfywPUYDoLdynKloy1wdGZ2dKj/ewCmA5vhQ/Iw8KtwvunPaJdt1nNaSFgBDXBvg3InrCyGvGrCe1uzr3w/cVuFzWncKfqmmjQRcvzbdtdhLRpi0lpd6npEPohpkf4xty+wZBINdIL9u2vq/5fuiMyDqie+svmMMPQzrBYl48wm7ZHBKRK4y+GQnlC8E3AHHdFfgR404NwXrwgKwU1XBYn3Tp/ojChEtbiTNfB/TQ+mIVlcgNn5bbWzWQBwRhnvjP4e/THC5A5iXhkWZy+v1NdrqijcRjgUWT
+					</span>
+					<br><br>
+
+					Key:<br>
+					<span class="red lighten-4">
+					2HgOYMqX
+					</span><br><br>
+
+					Initialization String (required in CBC mode):<br>
+					<span class="red lighten-4">
+					eYonRFhG
+					</span>
+				<br>
+			</div>
+		</div>
+	</div>	<!-- company letter ended -->
+
+	<br>
+
+
+	<!-- my comments-->
+	<br><br>
+	<div class="row">
+		<div class="col offset-s1 s10">
+			One of the last assignments! Exciting!<br><br>
+
+			And, why did the investigator encrypt his report? Is there something shocking underneath? <br><br>
+
+			Let's find out.
+			<br>
+		</div>
+	</div>
+
+
+	<!-- dummy challenge -->
+	<div class="row">
+		<br>
+		<div class="input-field col offset-s1 s10">
+            <textarea id="solution" class="materialize-textarea" placeholder=""></textarea>
+            <label for="solution">Solution</label>
+        </div>
+
+	    <!-- button -->
+	    <div class="col offset-s1 s10 center-align">
+		    <a id="submit-btn" class="btn-floating btn-large waves-effect waves-light red accent-2 tooltipped" data-position="right" data-delay="50" data-tooltip="Submit"><i class="material-icons">done</i></a>
+		
+		<br><br>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- JS containing all the solutions -->
+<script src="lib/my/solutions.js"></script>
+<script>var chapter = 12;</script>
+<script src="lib/my/game-mechanics.js"></script>
+
+
+<!-- 
+	Code Ends 
+-->
+
+	
+
+
+</body>
+</html>

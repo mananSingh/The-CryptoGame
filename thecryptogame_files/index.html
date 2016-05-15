@@ -1,0 +1,191 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> The CryptoGame </title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="Cryptography game suspense thriller interactive fiction text-based ">
+	<meta name="description" content="The CryptoGame is an interactive fictional suspense thriller based on Cryptography. 14 Challenges, 1 Mystery, and you have to investigate, solve and unravel the mystery behind sudden Disappearance of Mr. Wright.">
+	<meta name="author" content="Manan Singh">
+
+	<link rel="shortcut icon" href="images/favicon.ico">
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- 
+		SETUP COMMON CSS & JS FILES 
+	-->
+	<script type="text/javascript" src="lib/jquery-1.12.1.min.js"></script>
+
+	<!-- setup materialize.-->
+	<!-- 1. import google icon font -->
+		<!-- for offline case -->
+	<link rel="stylesheet" href="lib/materialize/iconfont/material-icons.css">
+		<!-- or, if online 
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		-->
+	<!-- 2. import materialize.css -->
+	<link rel="stylesheet" href="lib/materialize/css/materialize.min.css" media="screen,projection">
+	<!-- 3. import materilize.js (make sure jquery has already been included) -->
+	<script type="text/javascript" src="lib/materialize/js/materialize.min.js"></script>
+
+	<script type="text/javascript" src="lib/validate.min.js"></script>
+
+
+	<!-- my js: some greet functions; text resize on copy paste, etc.-->
+	<script type="text/javascript" src="lib/my/main.js"></script>
+	<link rel="stylesheet" href="lib/my/main.css">
+</head>
+<body>
+<!-- 
+	Code Begins 
+-->
+
+
+
+<!-- main screen -->
+<div class="container">
+	
+	<br>
+	<div class="row">
+		
+		<!-- poster -->
+	
+		<div class="col s6">
+			<img class="materialboxed responsive-img z-depth-1" src="images/homePoster.jpg" style="max-width:100%;height:auto;width:auto/9;">
+		</div>
+	
+
+		<!-- rest of the details -->
+
+		<div class="col s6">
+			<div class="row right-align">
+				<div class="s12"><br>
+					<h4 class="flow-text"> T H E<br>C R Y P T O G A M E </h4>
+					
+					<p style="margin: 2.5em 0">
+						"A Cryptography based Interactive Fiction"<br><br>
+						<em><span class="teal lighten-3">Investigate.</span>  	
+						<span class="red lighten-3">Solve.</span>   
+						<span class="cyan lighten-3">Unravel.</span>
+						Mystery.
+						</em><br>
+
+						<div style="text-align:justify; padding-left: 3em" >
+						Sudden Disappearance of a Cryptographer has led to a trail of mysterious Cipher clues. Investigate the Case - Riddles, Warnings and Secret messages - to uncover the reality and save those in danger. 
+						</div>
+
+					</p>
+					
+				</div>
+			</div>
+
+			<!-- continue how -->
+			<div class="row right-align">
+
+				<div id="already-registered">
+					<div class="row">
+						<br>
+						<a id="continue" class="waves-effect waves-light btn teal darken-1 modal-trigger">Continue As <strong><span id="username"></span></strong></a><br><br>
+						or <a id="show-first-time" style="color:teal">Begin as a New User</a>
+					</div>
+				</div>
+
+				<div id="first-time">
+					<div class="row">
+						<div class="input-field col s6 offset-s6">
+				          <input id="user_name" type="text" class="validate">
+				          <label for="user_name">Enter Your Name Here</label>
+
+					<a id="begin" class="waves-effect waves-light btn teal accent-4 modal-trigger">Let's Begin</a><br>
+				        </div>
+			   		</div>
+				</div>
+
+
+				<!-- <div class="col s12">
+					<a class="waves-effect waves-light btn teal accent-4 modal-trigger" href="#signup-modal">Signup</a><br>
+				</div>
+				<div class="col s12">
+					<a class="waves-effect waves-light btn teal darken-1 modal-trigger" href="#login-modal">Login</a>
+				</div> -->
+			</div>
+
+
+		</div>
+	</div>
+
+	
+</div>
+
+
+<script>
+	$(document).ready(function() {
+
+		//by default hide the divs
+		$("#first-time").hide();
+		$("#already-registered").hide();
+
+		//check if localStorage available or not.
+		  if(typeof(Storage) !== "undefined") {
+			    // Code for localStorage/sessionStorage. (is available)
+
+			    //Case 1: User opens app for first time. not registered already.
+			    if(!localStorage.user){	//no username
+					$("#first-time").show();  		
+			    }
+			    //Case 2: User already stored in localStorage.
+			    else{	//username registered already.
+
+			    	//output to <span username> the registered username.
+			    	$("#username").text(localStorage.user);
+			    	$("#already-registered").show();
+			    }
+	    
+
+
+			} else {
+			    // Sorry! No Web Storage support..
+			    var msg = "<div class='center-align' style='margin:3em'> : (<br><br>Cannot run the App.<br><br>'localStorage' feature Not Found. <br><br>Use a Newer version of the Web Browser.<br><br></div>";
+			    $("body").html(msg);
+			}
+
+	});
+
+
+	$("#begin").click(function(){
+		var user_name = $.trim($("#user_name").val());
+		if(user_name == ""){
+			Materialize.toast("Please Enter Your Name", 8000);
+		}else{
+			localStorage.user = user_name;
+			localStorage.progress = 0;
+			window.location.href = "home.html";
+		}
+	});
+
+	$("#continue").click(function(){
+		window.location.href = "home.html";
+	});
+
+	$("#show-first-time").click(function(){
+		$("#first-time").toggle();
+	});
+</script>
+
+
+
+<!-- 
+	Code Ends 
+-->
+
+	
+
+
+</body>
+</html>

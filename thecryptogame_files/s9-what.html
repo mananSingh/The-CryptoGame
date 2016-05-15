@@ -1,0 +1,211 @@
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> The CryptoGame </title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="Cryptography game suspense thriller interactive fiction text-based ">
+	<meta name="description" content="The CryptoGame is an interactive fictional suspense thriller based on Cryptography. 14 Challenges, 1 Mystery, and you have to investigate, solve and unravel the mystery behind sudden Disappearance of Mr. Wright.">
+	<meta name="author" content="Manan Singh">
+
+	<link rel="shortcut icon" href="images/favicon.ico">
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- 
+		SETUP COMMON CSS & JS FILES 
+	-->
+	<script type="text/javascript" src="lib/jquery-1.12.1.min.js"></script>
+
+	<!-- setup materialize.-->
+	<!-- 1. import google icon font -->
+		<!-- for offline case -->
+	<link rel="stylesheet" href="lib/materialize/iconfont/material-icons.css">
+		<!-- or, if online 
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		-->
+	<!-- 2. import materialize.css -->
+	<link rel="stylesheet" href="lib/materialize/css/materialize.min.css" media="screen,projection">
+	<!-- 3. import materilize.js (make sure jquery has already been included) -->
+	<script type="text/javascript" src="lib/materialize/js/materialize.min.js"></script>
+
+	<script type="text/javascript" src="lib/validate.min.js"></script>
+
+
+	<!-- my js: some greet functions; text resize on copy paste, etc.-->
+	<script type="text/javascript" src="lib/my/main.js"></script>
+	<link rel="stylesheet" href="lib/my/main.css">
+</head>
+<body>
+<!-- 
+	Code Begins 
+-->
+
+
+<div class="container">
+	<div class="row center-align">
+		<a href="storyline.html" style="color:#d32f2f">&larr; Back</a>
+		<br>	
+		<h4>Chapter 9: Another Curious Case</h4>
+	</div>
+
+	<!-- my comments-->
+	<div class="row">
+		<div class="col offset-s1 s10">
+			<br>
+			<strong>Previously: </strong>The hex dump revealed some technical information like IP address of the Coatis Computer. But how could that be helpful?<br><br><br>
+
+			You are hoping that the previous message would have been helpful in the investigation.<br><br>
+
+			It's the same day. And you have recieved another assignment. But this time it does not seem related to the current case.
+
+		</div>
+	</div>
+	<br>
+
+	<!-- letter head of company -->
+	<div class="lined-paper-bg z-depth-1">
+
+		<!-- letter head -->		
+		<div class="row">
+	<div class="col offset-s1 s2">
+		<img class="responsive-img" src="images/agillogo.png">
+	</div>
+
+	<!-- date -->
+	<div class="col s6 center-align">
+		<br>
+		A G I L &nbsp;&nbsp; I n v e s t i g a t i o n  &nbsp; &nbsp; I n c .<br>
+		Spellborough, U.K.<br><br>
+	</div>
+
+<!-- this be completed in another file -->			<div class="col s6 center-align">
+				15 May, 2009
+			</div>
+
+		</div>
+		<!-- letter head  Ended-->
+
+
+		<div class="row">
+
+			<div class="divider offset-s1 col s10 teal"></div><br>
+
+			<div class="col offset-s2 s8 right-align">
+				Assignment #9
+			</div>
+
+			<div class="col offset-s2 s8" style="text-align:justify">
+
+				<br>
+				<strong>OBJECTIVE</strong>: Decrypt the Message.<br><br>
+				<strong>DESCRIPTION</strong>: The IP address that you decrypted could be very helpful in our investigation, and we have asked the cyber security personnels to look into it. In the meantime, there is another assignment for you.<br>
+				One of our another client, Miss Della Simone, registered a queer complaint recently. According to her, one day, when her mom was working routinely on her computer, she found out that all her files had been mysteriously locked automatically and the screen announced "Your files are encrypted". At first, we suspected it might be some handling error by her mom. But she kept assuring that all this happened on its own!<br>
+				She claimed that her mom was very possibly hacked as the computer screen also prompted them to pay 500 USD to decrypt those files. Finally, on her persistent request, we sent the encrypted files to be cryptanalyzed and cracked, to some of our senior cryptographers. They have replied with a report, which is encrypted with the modern block cipher DES in ECB mode.<br>
+				Decrypt and submit that report.
+				<br> <br>
+				<strong>CIPHER INFO</strong>: Data Encryption Standard (DES), Mode-of-Operation: Electronic Code Book (ECB)<br>
+			</div>
+		</div>
+
+		
+		<div class="row">
+			<div class="col offset-s2 s8">
+				<br>
+				<em>Encl. (1)</em><br>
+
+				<ol>
+					<li>DES Ciphertext and Key.</li>
+				</ol>
+
+				<br>
+			</div>
+		</div>
+	</div>	<!-- company letter ended -->
+
+	<br>
+
+	<!-- letter head of company -->
+	<div class="lined-paper-bg z-depth-1">
+		<div class="row">
+
+			<div class="col offset-s1 s10 left-align">
+				<strong>REPORT</strong><br>
+				TYPE: DES Ciphertext and the Key<br>
+				FROM: Senior Cryptanalysts<br>
+				Date: 15 May, 2009<br>
+			</div>
+
+			<div class="col offset-s2 s8" style="text-align:justify; word-wrap: break-word;">
+				<br>
+					Ciphertext: <br>
+					<span class="red lighten-4">
+					sgkPb+cgzCXNzqHhYHthklm6KvBu5HvDZAQHJqgfZOKnWG4W+jvZLMF+lVv7IjBDKxskVnBIhG1dW5OCfF50qFhxvMMi73jWWHbRlrGPoCRfZY/xxBhZIzeSG+Dl+OwR4CZdzHSPhkxkYBoB8CGtGGPEXSZG/oVhjWmWk4vPyIJozAqxINwr5HsC70qHUvtCF/df6+sHpqwucfbG7aSlkE46++496VGEicvYRHTDFpj1i7j55Z81NtZHPpaIyS1xwnl3v/yZxUrOORETPh68P0IIKP4aT0slpph2rDCTXtvSn7v2NJvtopGd30OYRY40GTcNaEwwOC/qFpuGjXW73j8PYdXLvOGCR/tl+DGVGkSwUB6dXVv2vmE++4XJPgJdfnvzw11gX9JJLxdr98Kr/7hJzhp/lkflsGmBdvIL2vsUljKHjGOIF4DPnmvA+MFN5EIMlpqeBDlLp0XOhTRMGs4Cl4L3n9j+HjUGuCSCAlvRc1a2fX28S6OLoPP7csZbFAMDjDQ2/1ZlxdIJEM51AM3PAfM5O5jTD97nmUCBMMi5nE2se8M0g7AKQgErVFlStbtlBB3lUjg5Qcg751dWxpKRoe3cngfKOCX6IaYCLUNGL0aICHWvDYVgFc8WfwbQuOEZPKVYW1ON6d7ye4/w4/PzqB9EJftls9ee1QVYYocq42OhYCTUW2cwnbXr5Ix8LVG3Pr/otID+tRADjfcFScFCP0+hg4n6iv8m5V1CLtwHoSz1BKel4qrsdGh9Y4d491eON/sb42y5oY97ahfxgeUkzG8b7Hkp2sxC9GQGliShDJzU60GFZuXpKEiv1YBhD97nmUCBMMi8nIdB7Vfwqf8bF+bdAwfHOdkxLrV7wFUR6OM+pv3QgYFuq/gcxUu/hleFj0KN1iobp4/6MtBwwdblLFa/IL3JkqN6SbRi9+1/XvXJ0o8td6fINwEBzOom5iEEtkNIZOnC6UcQcPpDnG56LGnU5CDrpqpRq5gJUUvhJDcci6ytRIRSw31YMFmdJifu27b2GAlAO+CvH75sbtYIQBmAfKPkaMVj8mez6/gEFGPiXvJ78mvIsuORdZJ9qdL4uIngiqKiyMaJi5mhdvQPBfmVwbEF4wlQLmBmdGRhyjR/ndLRS32Rb6pwqQhAcbqnMPVMkj7ld+F8X4Oi3LyOUSqFkC09rOC7n5hw6ZHIjMGC2vAaWNOWBZIKo8+f
+					</span>
+					<br><br>
+
+					Key:<br>
+					<span class="red lighten-4">
+					U7sy3VQE
+					</span>
+				<br>
+			</div>
+		</div>
+	</div>	<!-- company letter ended -->
+
+	<br>
+
+
+	<!-- my comments-->
+	<br><br>
+	<div class="row">
+		<div class="col offset-s1 s10">
+			Really, a curious case!<br><br>
+
+			Let's find out what the report says.
+			<br>
+		</div>
+	</div>
+
+
+	<!-- dummy challenge -->
+	<div class="row">
+		<br>
+		<div class="input-field col offset-s1 s10">
+            <textarea id="solution" class="materialize-textarea" placeholder=""></textarea>
+            <label for="solution">Solution</label>
+        </div>
+
+	    <!-- button -->
+	    <div class="col offset-s1 s10 center-align">
+		    <a id="submit-btn" class="btn-floating btn-large waves-effect waves-light red accent-2 tooltipped" data-position="right" data-delay="50" data-tooltip="Submit"><i class="material-icons">done</i></a>
+		
+		<br><br>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- JS containing all the solutions -->
+<script src="lib/my/solutions.js"></script>
+<script>var chapter = 9;</script>
+<script src="lib/my/game-mechanics.js"></script>
+
+
+<!-- 
+	Code Ends 
+-->
+
+	
+
+
+</body>
+</html>

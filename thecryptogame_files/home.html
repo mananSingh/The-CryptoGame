@@ -1,0 +1,190 @@
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> The CryptoGame </title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="Cryptography game suspense thriller interactive fiction text-based ">
+	<meta name="description" content="The CryptoGame is an interactive fictional suspense thriller based on Cryptography. 14 Challenges, 1 Mystery, and you have to investigate, solve and unravel the mystery behind sudden Disappearance of Mr. Wright.">
+	<meta name="author" content="Manan Singh">
+
+	<link rel="shortcut icon" href="images/favicon.ico">
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- 
+		SETUP COMMON CSS & JS FILES 
+	-->
+	<script type="text/javascript" src="lib/jquery-1.12.1.min.js"></script>
+
+	<!-- setup materialize.-->
+	<!-- 1. import google icon font -->
+		<!-- for offline case -->
+	<link rel="stylesheet" href="lib/materialize/iconfont/material-icons.css">
+		<!-- or, if online 
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		-->
+	<!-- 2. import materialize.css -->
+	<link rel="stylesheet" href="lib/materialize/css/materialize.min.css" media="screen,projection">
+	<!-- 3. import materilize.js (make sure jquery has already been included) -->
+	<script type="text/javascript" src="lib/materialize/js/materialize.min.js"></script>
+
+	<script type="text/javascript" src="lib/validate.min.js"></script>
+
+
+	<!-- my js: some greet functions; text resize on copy paste, etc.-->
+	<script type="text/javascript" src="lib/my/main.js"></script>
+	<link rel="stylesheet" href="lib/my/main.css">
+</head>
+<body>
+
+<!-- 
+	Code Begins 
+-->
+
+
+
+<div class="container">
+	<!-- greet first -->
+
+	<div class="row center-align flow-text">
+		<div class="col s10 offset-s1">
+			<h3>Hi, <span id="username"></span></h3>
+			<p>
+				Welcome to the game.<br>
+				You have passed <span id="progress"></span>/14 chapters yet. <br>
+				An exciting adventure awaits you ahead.
+			</p>
+		</div>
+	</div>
+
+
+
+	<!-- The buttons -->
+	<div class="row center-align">
+		<div class="row"><div class="col s6 offset-s3">
+			<a class="waves-effect waves-light btn-large red darken-2" href="storyline.html">Continue Storyline <i class="material-icons right">send</i></a>
+		</div></div>
+
+		<div class="row"><div class="col s6 offset-s3">
+			<a class="waves-effect waves-light btn-large cyan darken-3" href="cryptolab.html">CryptoLab  <i class="material-icons right">phonelink_lock</i></a>
+		</div></div>
+
+		<div class="row"><div class="col s6 offset-s3">
+			<a class="waves-effect waves-light btn teal" href="profile.html">Profile</a>
+		</div></div>
+
+		<div class="row"><div class="col s6 offset-s3">
+			<a class="waves-effect waves-light btn grey darken-1 modal-trigger" href="#about-modal">About</a>
+		</div></div>
+
+		<div class="row"><div class="col s6 offset-s3">
+			<a class="waves-effect waves-light btn-floating grey lighten-1 tooltipped" data-position="right" data-delay="50" data-tooltip="Exit" href="index.html"><i class="material-icons">power_settings_new</i></a>
+		</div></div>
+
+	</div>
+
+</div>
+
+
+
+<!-- just for about modal.. -->
+
+<!-- Modal Structure -->
+  <div id="about-modal" class="modal">
+
+    <div class="modal-content">
+      <h4 class="center-align">About</h4>
+      <div class="divider"></div>
+      <p>
+      	The CryptoGame is an interactive fiction - a suspense thriller - based on Cryptography.<br><br>
+
+      	Sudden Disappearance of a Cryptographer has led to a trail of mysterious Cipher clues. Investigate the Case - Riddles, Warnings and Secret messages - to uncover the reality and save those in danger.<br><br>
+
+
+
+      	<strong>How to Play</strong><br>
+      	"Storyline" takes you on an investigative journey, where at each stage/level/chapter, you need to solve a challenge. To solve the challenge, you will have to use the suggested unlocked 'tool' from "Cryptolab".<br>
+      	As you will proceed in the story, the plot will thicken and the mystery will deepen. You will have to use your careful observation and the help from "Cryptolab" to overcome each hurdle, and reach to the bottom of the mystery.<br>
+      	All the Best.<br><br>
+
+      	<strong>Keep in mind</strong><br>
+      	This app uses In-Browser storage for saving your progress.<br>
+      	Your progress will remain saved, even after you close the browser. And so, when you will reopen the application using the same browser, you will be able to resume from where you left.<br>
+      	But, if you change the browser or delete in-browser storage, your progress will be lost.<br><br>
+
+        Contact (Email Id): <em>the.cryptogame@gmail.com</em><br><br>
+
+		Copyright (c) 2016 Contributors of The CryptoGame<br><br>
+      </p>
+      <div class="divider"></div>
+      <p>
+      	<br>
+      	<strong>Cheat Code</strong><br>
+      	<span>(Not Recommended. Just for Emergency cases.)</span><br>
+      	You can bypass any number of levels, and increase your progress with a little technical trick. Example: To pass 2 chapters automatically, Open the Javascript console in your web browser and type in the command: <span style="font-family:courier">localStorage.progress = 2</span> <br>...and reload the web browser. <br><br>
+
+      </p>
+    </div>
+
+  <!--   <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-dark btn-flat">OK</a>
+    </div>
+	-->
+
+  </div>
+<script>
+	$(document).ready(function() {
+	  $('.modal-trigger').leanModal();
+		$(".modal").width("40vw");
+		
+		//check if localStorage available or not.
+	  	if(typeof(Storage) !== "undefined") {
+		    // Code for localStorage/sessionStorage. (is available)
+
+		    //Case 1: User opens app for first time. not registered already.
+		    if(!localStorage.user){	//no username
+		    	//redirect to first page
+		    	window.location.href = "index.html";
+		    }
+
+		    //Case 2: User already stored in localStorage.
+		    else{	//username registered already.
+
+		    	//output to <span username> the registered username.
+		    	$("#username").text(localStorage.user);
+
+		    	if(localStorage.progress > 14){	//rare case: maybe because of misuse of cheatcode.
+		    		localStorage.progress = 14;
+		    	}
+		    	$("#progress").text(localStorage.progress);
+		    }
+    
+
+
+		} else {
+		    // Sorry! No Web Storage support..
+		    var msg = "<div class='center-align' style='margin:3em'> : (<br><br>Cannot run the App.<br><br>'localStorage' feature Not Found. <br><br>Use a Newer version of the Web Browser.<br><br></div>";
+		    $("body").html(msg);
+		}
+
+
+	});
+</script>
+
+<!-- 
+	Code Ends 
+-->
+
+	
+
+
+</body>
+</html>

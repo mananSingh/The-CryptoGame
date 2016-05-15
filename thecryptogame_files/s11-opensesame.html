@@ -1,0 +1,224 @@
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> The CryptoGame </title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="Cryptography game suspense thriller interactive fiction text-based ">
+	<meta name="description" content="The CryptoGame is an interactive fictional suspense thriller based on Cryptography. 14 Challenges, 1 Mystery, and you have to investigate, solve and unravel the mystery behind sudden Disappearance of Mr. Wright.">
+	<meta name="author" content="Manan Singh">
+
+	<link rel="shortcut icon" href="images/favicon.ico">
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- 
+		SETUP COMMON CSS & JS FILES 
+	-->
+	<script type="text/javascript" src="lib/jquery-1.12.1.min.js"></script>
+
+	<!-- setup materialize.-->
+	<!-- 1. import google icon font -->
+		<!-- for offline case -->
+	<link rel="stylesheet" href="lib/materialize/iconfont/material-icons.css">
+		<!-- or, if online 
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		-->
+	<!-- 2. import materialize.css -->
+	<link rel="stylesheet" href="lib/materialize/css/materialize.min.css" media="screen,projection">
+	<!-- 3. import materilize.js (make sure jquery has already been included) -->
+	<script type="text/javascript" src="lib/materialize/js/materialize.min.js"></script>
+
+	<script type="text/javascript" src="lib/validate.min.js"></script>
+
+
+	<!-- my js: some greet functions; text resize on copy paste, etc.-->
+	<script type="text/javascript" src="lib/my/main.js"></script>
+	<link rel="stylesheet" href="lib/my/main.css">
+</head>
+<body>
+<!-- 
+	Code Begins 
+-->
+
+
+<div class="container">
+	<div class="row center-align">
+		<a href="storyline.html" style="color:#d32f2f">&larr; Back</a>
+		<br>	
+		<h4>Chapter 11: Open the door!!</h4>
+	</div>
+
+	<!-- my comments-->
+	<div class="row">
+		<div class="col offset-s1 s10">
+			<br>
+			<strong>Previously: </strong>The secret emails of COATIS revealed it as a cyber crime organization responsible for spreading a virus which encrypted people's digital files and demanded large amounts of money as ransom. It confirmed involvement of the reputed company Fero Systems in this business and mentioned Mr. Thomas Wright as its Chief Cryptographer!<br><br><br>
+
+			"It seems the nemesis of all those involved in this crime is near. But Mr. Wright also!?"<br><br>
+
+			It seems as if the mystery of his disapperance have almost cleared, but sometimes there's more than meets the eye.<br><br>
+
+			Only few hours passed, and you got another assignment.
+
+		</div>
+	</div>
+	<br>
+
+	<!-- letter head of company -->
+	<div class="lined-paper-bg z-depth-1">
+
+		<!-- letter head -->		
+		<div class="row">
+	<div class="col offset-s1 s2">
+		<img class="responsive-img" src="images/agillogo.png">
+	</div>
+
+	<!-- date -->
+	<div class="col s6 center-align">
+		<br>
+		A G I L &nbsp;&nbsp; I n v e s t i g a t i o n  &nbsp; &nbsp; I n c .<br>
+		Spellborough, U.K.<br><br>
+	</div>
+
+<!-- this be completed in another file -->			<div class="col s6 center-align">
+				18 May, 2009
+			</div>
+
+		</div>
+		<!-- letter head  Ended-->
+
+
+		<div class="row">
+
+			<div class="divider offset-s1 col s10 teal"></div><br>
+
+			<div class="col offset-s2 s8 right-align">
+				Assignment #11
+			</div>
+
+			<div class="col offset-s2 s8" style="text-align:justify">
+
+				<br>
+				<strong>OBJECTIVE</strong>: Crack the Hash.<br><br>
+				<strong>DESCRIPTION</strong>: The revelatory information that you submitted today was too sensitive and serious, and therefore, the police as well as our investigators departed swiftly for a raid to the building of Fero Systems. They have been there for last half an hour. They have searched the whole place and found dozens of evidences related to the terrible works that COATIS was upto. Only their steel-built server room, secured by a digital password locker is left impenetrable yet. The team there has extracted the hash of that password, but still don't know the password itself. It would significantly speed up the raid, if that password could be cracked quickly here at our lab.<br>
+				With similar hopes, they have sent the MD5 hash to us, which has been attached with this letter too. A wordlist containing hundreds of possible passwords is also attached herewith. You need to use that wordlist to crack the MD5 Hash, and submit to us quickly, as both our team and the Police await the response. 
+				<br> <br>
+				<strong>TECHNIQUE INFO</strong>: MD5 Hash. <br>
+			</div>
+		</div>
+
+		
+		<div class="row">
+			<div class="col offset-s2 s8">
+				<br>
+				<em>Encl. (2)</em><br>
+
+				<ol>
+					<li>MD5 Hash (to be cracked).</li>
+					<li>Wordlist.</li>
+				</ol>
+
+				<br>
+			</div>
+		</div>
+	</div>	<!-- company letter ended -->
+
+	<br>
+
+	<!-- letter head of company -->
+	<div class="lined-paper-bg z-depth-1">
+		<div class="row">
+
+			<div class="col offset-s1 s10 left-align">
+				<strong>EVIDENCE</strong><br>
+				TYPE: Password in MD5 Hash<br>
+				FOUND: Basement of 241, 9th Avenue, Dellmoore Road<br>
+				Date: 18 May, 2009<br>
+			</div>
+
+			<div class="col offset-s2 s8" style="text-align:justify">
+				<br>
+					<span class="red lighten-4">
+					0a90a62f803a15929e5c5a67adb5f35b
+					</span>
+				<br>
+			</div>
+		</div>
+	</div>	<!-- company letter ended -->
+
+	<br>
+	<!-- letter head of company -->
+	<div class="lined-paper-bg z-depth-1">
+		<div class="row">
+
+			<div class="col offset-s1 s10 left-align">
+				<strong>WORDLIST</strong><br>
+			</div>
+
+			<div class="col offset-s2 s8 just-align">
+				<br>
+					123456; password; 12345678; qwerty; 123456789; 12345; 1234; 111111; 1234567; dragon; 123123; baseball; abc123; football; monkey; letmein; 696969; shadow; master; 666666; qwertyuiop; 123321; mustang; 1234567890; michael; 654321; 1qaz2wsx; 7777777; 121212; 000000; qazwsx; 123qwe; killer; trustno1; jordan; jennifer; zxcvbnm; asdfgh; hunter; buster; soccer; harley; batman; andrew; tigger; sunshine; benedict; 2000; charlie; robert; thomas; hockey; ranger; daniel; starwars; klaster; 112233; george; computer; michelle; jessica; pepper; 1111; zxcvbn; 555555; 11111111; 131313; freedom; 777777; pass; maggie; 159753; aaaaaa; ginger; princess; joshua; cheese; amanda; summer; love; ashley; 6969; nicole; chelsea; matthew; access; yankees; 987654321; dallas; austin; thunder; taylor; william; corvette; hello; martin; heather; secret; merlin; diamond; 1234qwer; gfhjkm; hammer; silver; 222222; 88888888; anthony; justin; test; bailey; q1w2e3r4t5; patrick; internet; scooter; orange; 11111; golfer; cookie; richard; vladimir; money1; freeuser; wildcats; francis; disney; budlight; brittany; 1994; 00000000; samantha; guitar; jackson; whatever; mickey; chicken; sparky; snoopy; maverick; phoenix; camaro; peanut; morgan; welcome; falcon; cowboy; ferrari; samsung; andrea; smokey; steelers; joseph; mercedes; dakota; arsenal; eagles; melissa; boomer; spider; nascar; monster; tigers; yellow; 123123123; gateway; marina; diablo; bulldog; qwer1234; compaq; purple; banana; junior; hannah; 123654; porsche; lakers; iceman; money; cowboys; 987654; london; tennis; 999999; ncc1701; coffee; scooby; 0000; miller; boston; q1w2e3r4; brandon; yamaha; chester; mother; forever; johnny; edward; 333333; oliver; redsox; player; nikita; knight; fender; barney; midnight; please; brandy; chicago; badboy; iwantu; slayer; rangers; charles; angel; flower; bigdaddy; rabbit; wizard; jasper; enter; rachel; chris; steven; winner; adidas; victoria; natasha; 1q2w3e4r; jasmine; winter; prince; marine; ghbdtn; fishing; cocacola; casper; james; 232323; raiders; 888888; marlboro; gandalf; asdfasdf; crystal; 87654321; 12344321; golden; 8675309; panther; lauren; angela; thx1138; angels; madison; winston; shannon; mike; toyota; blowjob; jordan23; canada; sophie; Password; tiger; razz; 123abc; pokemon; 55555; qwaszx; muffin; johnson; murphy; cooper; jonathan; liverpoo; david; danielle; 159357; jackie; 1990; 123456a; 789456; turtle; abcd1234; scorpion; qazwsxedc; 101010; butter; carlos; password1; dennis; slipknot; qwerty123; booger; asdf; 1991; black; startrek; 12341234; cameron; newyork; rainbow; nathan; john; 1992; rocket; viking; redskins; butthead; asdfghjkl; 1212; sierra; peaches; gemini; doctor; wilson; sandra; helpme; qwertyui; victor; florida; dolphin; pookie; captain; tucker; blue; liverpool; theman; bandit; dolphins; maddog; packers; jaguar; lovers; nicholas; united; tiffany; maxwell; zzzzzz; nirvana; jeremy; stupid; monica; elephant; giants; hotdog; rosebud; success; debbie; mountain; 444444; warrior; 1q2w3e4r5t; q1w2e3; 123456q; albert; metallic; lucky; azerty; 7777; alex; bond007; alexis; 1111111; 5150; willie; scorpio; bonnie; gators; benjamin; voodoo; driver; dexter; 2112; jason; calvin; freddy; 212121; creative; 12345a; sydney; rush2112; 1989; asdfghjk; red123; bubba; 4815162342; passw0rd; trouble; gunner; happy; gordon; legend; jessie; stella; qwert; eminem; arthur; apple; nissan; bear; america; 1qazxsw2; nothing; parker; 4444; rebecca; qweqwe; garfield; 01012011; beavis; 69696969; jack; asdasd; december; 2222; 102030; 252525; 11223344; magic; apollo; skippy; 315475; girls; kitten; golf; copper; braves; shelby; godzilla; beaver; fred; tomcat; august; buddy; airborne; 1993; 1988; lifehack; qqqqqq; brooklyn; animal; platinum; phantom; online; xavier; darkness; blink182; power; fish; green; 789456123; voyager; police; travis; 12qwaszx; heaven; snowball; lover; abcdef; 00000; pakistan; 007007; walter; blazer; cricket; sniper; donkey; willow; saturn; therock; redwings; bigboy; pumpkin; trinity; williams; nintendo; digital; destiny; topgun; runner; marvin; guinness; chance; bubbles; testing; fire; november; minecraft; asdf1234; lasvegas; sergey; broncos; cartman; private; celtic; birdie; little; cassie; babygirl; donald; beatles; 1313; family; 12121212; school; louise; gabriel; eclipse; fluffy; 147258369; lol123; explorer; beer; nelson; flyers; spencer; scott; lovely; gibson; doggie; cherry; andrey; snickers; buffalo; pantera; metallica; member; carter; qwertyu; peter; alexande; steve; bronco; paradise; goober; 5555; samuel; montana; mexico; dreams; michigan; carolina; yankee; friends; magnum; surfer; maximus; genius; cool; vampire; lacrosse; beginMsg; manan; developer; dsvv2016; lifeIsWhat; science; non_duality; spiritual; geeta; krishna; infinite; inspire; meditation; samHarris; jasonSilva; workin; stevejobs;  sherlock; harryPotter; fantastic; beasts; matrix; inception; usual; suspects; apocalypse; thriller; tamsyn; thomas; mean; twin; inrussian; foma; allareone; snowden; cs50; thomas; wasalone; ocwmitedu; khan; academy; artoftheproblem; beauty; mathematics; csfun_tv; coding_song; epic; insideOut; sing2016; drStrange; coatis; cryptoransom; cryptowall; howmymomgothacked; alina_simone; della_simone; starrybourne; dellmoor; laurelsDiner; spellborough; fero_systems; thomas_wright; anagram; Warthog_Smith; ransom_people; endMsg; wewillrobyou; asd123; aaaa; christin; kimberly; speedy; sharon; carmen; 111222; kristina; sammy; racing; ou812; sabrina; horses; 0987654321; qwerty1; baby; stalker; enigma; 147147; star; poohbear; 147258; simple; 12345q; marcus; brian; 1987; qweasdzxc; drowssap; hahaha; caroline; barbara; dave; viper; drummer; action; genesis; hello1; scotty; friend; forest; 010203; hotrod; google; vanessa; spitfire; badger; maryjane; friday; alaska; 1232323q; tester; jester; jake; champion; billy; 147852; rock; hawaii; badass; chevy; 420420; walker; stephen; eagle1; bill; 1986; october; gregory; svetlana; pamela; 1984; music; shorty; westside; stanley; diesel; courtney; 242424; kevin; hitman; mark; 12345qwert; reddog; frank; qwe123; popcorn; patricia; aaaaaaaa; 1969; teresa; mozart; buddha; anderson; paul; melanie; abcdefg; security; lucky1; lizard; denise; 3333; a12345; 123789; ruslan; stargate; simpsons; scarface; eagle; 123456789a; thumper; olivia; naruto; 1234554321; general; cherokee; a123456; vincent; spooky; qweasd; cumshot; free; frankie; douglas; death; 1980; loveyou; kitty; kelly; veronica; suzuki; semperfi; penguin; mercury; liberty; spirit; scotland; natalie; marley; vikings; system; king; allison; marshall; 1979; 098765; qwerty12; hummer; adrian; 1985; vfhbyf; sandman; rocky; leslie; antonio; 98765432; 4321; softball; passion; mnbvcxz; passport; howard; franklin; bigred; alexander; redrum; jupiter; claudia; 55555555; 141414; zaq12wsx; patches; nigger; infinity; andre; 54321; galore; college; russia; kawasaki; bishop; 77777777; sweet; oksana; honda; domino; bulldogs; brutus; swordfis; norman; monday; jimmy; ironman; ford; fantasy; 9999; 7654321; PASSWORD; hentai; duncan; cougar; 1977; jeffrey; house; dancer; brooke; timothy; super; marines; justice; digger; connor; patriots; karina; 202020; molly; everton; tinker; alicia; rasdzv3; pearljam; stinky; naughty; colorado; 123123a; water; test123; ncc1701d; motorola; ireland; asdfg; matt; houston; boogie; zombie; accord; vision; bradley; reggie; kermit; froggy; ducati; avalon; 6666; 9379992; sarah; saints; logitech; chopper; 852456; simpson; madonna; juventus; claire; 159951; zachary; yfnfif; wolverin; warcraft; hello123; extreme; peekaboo; fireman; eugene; brenda; 123654789; russell; panthers; georgia; smith; skyline; jesus; elizabet; spiderman; smooth; pirate; empire; bullet; 8888; virginia; valentin; psycho; predator; arizona; 134679; mitchell; alyssa; vegeta; titanic; christ; goblue; fylhtq; wolf; mmmmmm; kirill; indian; hiphop; baxter; awesome; people; danger; roland; mookie; 741852963; 1111111111; dreamer; arnold; 1981; skipper; serega; rolltide; elvis; changeme; simon; 1q2w3e; lovelove; fktrcfylh; denver; tommy; mine; hobbes; happy1; alison; nemesis; chevelle; cardinal; burton; picard; 151515; tweety; michael1; 147852369; 12312; windows; turkey; 456789; 1974; vfrcbv; sublime; 1975; galina; bobby; newport; manutd; daddy; american; alexandr; 1966; victory; rooster; qqq111; madmax; electric; a1b2c3; wolfpack; spring; phpbb; lalala; spiderman; eric; darkside; classic; raptor; 123456789q; hendrix; 1982; wombat; avatar; alpha; zxc123; crazy; hard; england; brazil; 1978; 01011980; wildcat; polina; freepass
+					
+				<br>
+			</div>
+		</div>
+	</div>	<!-- company letter ended -->
+
+	<br>
+
+
+	<!-- my comments-->
+	<br><br>
+	<div class="row">
+		<div class="col offset-s1 s10">
+			Using Wordlist to crack MD5 Hash? And that also, using the Cryptolab Tool!<br><br>
+
+			Kid's Stuff! Let's crack that password.
+			<br>
+		</div>
+	</div>
+
+
+	<!-- dummy challenge -->
+	<div class="row">
+		<br>
+		<div class="input-field col offset-s1 s10">
+            <textarea id="solution" class="materialize-textarea" placeholder=""></textarea>
+            <label for="solution">Solution</label>
+        </div>
+
+	    <!-- button -->
+	    <div class="col offset-s1 s10 center-align">
+		    <a id="submit-btn" class="btn-floating btn-large waves-effect waves-light red accent-2 tooltipped" data-position="right" data-delay="50" data-tooltip="Submit"><i class="material-icons">done</i></a>
+		
+		<br><br>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- JS containing all the solutions -->
+<script src="lib/my/solutions.js"></script>
+<script>var chapter = 11;</script>
+<script src="lib/my/game-mechanics.js"></script>
+
+
+<!-- 
+	Code Ends 
+-->
+
+	
+
+
+</body>
+</html>

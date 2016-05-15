@@ -1,0 +1,242 @@
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> The CryptoGame </title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="Cryptography game suspense thriller interactive fiction text-based ">
+	<meta name="description" content="The CryptoGame is an interactive fictional suspense thriller based on Cryptography. 14 Challenges, 1 Mystery, and you have to investigate, solve and unravel the mystery behind sudden Disappearance of Mr. Wright.">
+	<meta name="author" content="Manan Singh">
+
+	<link rel="shortcut icon" href="images/favicon.ico">
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- 
+		SETUP COMMON CSS & JS FILES 
+	-->
+	<script type="text/javascript" src="lib/jquery-1.12.1.min.js"></script>
+
+	<!-- setup materialize.-->
+	<!-- 1. import google icon font -->
+		<!-- for offline case -->
+	<link rel="stylesheet" href="lib/materialize/iconfont/material-icons.css">
+		<!-- or, if online 
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		-->
+	<!-- 2. import materialize.css -->
+	<link rel="stylesheet" href="lib/materialize/css/materialize.min.css" media="screen,projection">
+	<!-- 3. import materilize.js (make sure jquery has already been included) -->
+	<script type="text/javascript" src="lib/materialize/js/materialize.min.js"></script>
+
+	<script type="text/javascript" src="lib/validate.min.js"></script>
+
+
+	<!-- my js: some greet functions; text resize on copy paste, etc.-->
+	<script type="text/javascript" src="lib/my/main.js"></script>
+	<link rel="stylesheet" href="lib/my/main.css">
+</head>
+<body>
+<!-- 
+	Code Begins 
+-->
+
+
+<div class="container">
+	<div class="row center-align">
+		<a href="storyline.html" style="color:#d32f2f">&larr; Back</a>
+		<br>	
+		<h4>Chapter 0 : Welcome Aboard!</h4>
+	</div>
+
+	<!-- my comments-->
+	<div class="row">
+		<div class="col offset-s1 s10">
+			<br>
+			This is where the story begins.<br><br>
+
+			It is summer of 2009. <br><br>After you apply for an Internship programme at the Cryptography division of a private investigation firm called Agil Investigation Inc., you get a letter from its director.
+
+		</div>
+	</div>
+	<br>
+
+	<!-- letter head of company -->
+	<div class="lined-paper-bg z-depth-1">
+
+		<!-- letter head -->		
+		<div class="row">
+	<div class="col offset-s1 s2">
+		<img class="responsive-img" src="images/agillogo.png">
+	</div>
+
+	<!-- date -->
+	<div class="col s6 center-align">
+		<br>
+		A G I L &nbsp;&nbsp; I n v e s t i g a t i o n  &nbsp; &nbsp; I n c .<br>
+		Spellborough, U.K.<br><br>
+	</div>
+
+<!-- this be completed in another file -->			<div class="col s6 center-align">
+				2 May, 2009
+			</div>
+
+		</div>
+		<!-- letter head  Ended-->
+
+
+		<div class="row">
+
+			<br>
+
+			<div class="col offset-s2 s8" style="text-align:justify">
+
+				Dear <span class="username"></span>, <br>
+
+				Your past accomplishments as mentioned in your resume as well as your performance in the interview and the demo-test, have finally compelled us to hire you as an intern in our Cryptography and Cyber Security division. You are welcome to commence your training at our campus from Monday this week. Or alternatively, you can also provide your services via remote correspondence. If you choose the latter, you will be sent a series of letters, with some Cryptography challenge in each; and on solving which, you will be able to help us directly on a professional case that we are assigned with.<br>
+				We welcome you to embark on this journey of learning the mysterious art and science of codes and ciphers, and simulatenously earn an investigative experience.<br>
+				All the best.<br>
+
+			</div>
+		</div>
+
+		<!-- signature -->
+		<div class="row">
+			<div class="col offset-s6 s4  center-align">
+
+				Sincerely, <br>			
+				Christopher Nott<br>
+				Director<br><br><br>
+			</div>
+		</div>
+
+	</div>	<!-- company letter ended -->
+
+
+	<!-- my comments-->
+	<br><br>
+	<div class="row">
+		<div class="col offset-s1 s10">
+			You choose the remote correspondence option, and the Head of Cryptography and Cyber Security Division writes to you the next day.<br><br>
+		</div>
+	</div>
+
+	<!-- letter head of company -->
+	<div class="lined-paper-bg z-depth-1">
+
+		<!-- letter head -->		
+		<div class="row">
+	<div class="col offset-s1 s2">
+		<img class="responsive-img" src="images/agillogo.png">
+	</div>
+
+	<!-- date -->
+	<div class="col s6 center-align">
+		<br>
+		A G I L &nbsp;&nbsp; I n v e s t i g a t i o n  &nbsp; &nbsp; I n c .<br>
+		Spellborough, U.K.<br><br>
+	</div>
+
+<!-- this be completed in another file -->			<div class="col s6 center-align">
+				3 May, 2009
+			</div>
+
+		</div>
+		<!-- letter head  Ended-->
+
+
+		<div class="row">
+
+			<br>
+
+			<div class="col offset-s2 s8" style="text-align:justify">
+
+				Dear <span class="username"></span>, <br>
+
+				Welcome to Agil.<br><br>
+				As you have chosen the letter-correspondence as the preferred mode of this internship, you will recieve timely letters which will define to you your Cryptography assignments. You will have to solve those challenges and submit the solution to us in short time. During this time, with some luck, you might get the chance to uncover a mystery or two, regarding a real-life case that you will be tasked with. We expect you to be completely sincere as well as secretive about all the matters that you will work upon during this time period.<br>
+				For learning requisite crypotgraphy techniques, you can use online or offline version of our Cryptolab which will provide all the related tools and articles.<br>
+				Finally, by the end of this programme, we hope that you will become a better version of yourself and capable of exploring new horizons that await you in the magical and fascinating realm of Cryptography.<br>
+				All the Best. <br>
+
+			</div>
+		</div>
+
+		<!-- signature -->
+		<div class="row">
+			<div class="col offset-s6 s4 center-align">
+
+			Sincerely, <br>			
+			Earle Smith<br>
+			Head<br>
+			(Cryptography and Cyber Security Division)<br><br>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col offset-s2 s8">
+				P.S.<br><br>
+
+				The real assignment series will begin from the next letter. But till then, try out a dummy challenge.
+				<br><br>
+			</div>
+		</div>
+	</div>	<!-- company letter ended -->
+
+
+	<!-- dummy challenge -->
+	<div class="row">
+		<div class="col offset-s1 s10">
+			<br><br>
+			
+			What can this mean? &nbsp; <span class="red lighten-3" id="challenge">BHJM</span> &nbsp;
+			 (Hint: <span id="hint">A*I*</span>)
+
+			<br><br>
+		</div>
+		<div class="input-field col offset-s1 s10">
+            <textarea id="solution" class="materialize-textarea" placeholder=""></textarea>
+            <label for="solution">Solution</label>
+        </div>
+
+	    <!-- button -->
+	    <div class="col offset-s1 s10 center-align">
+		    <a id="submit-btn" class="btn-floating btn-large waves-effect waves-light red accent-2 tooltipped" data-position="right" data-delay="50" data-tooltip="Submit"><i class="material-icons">done</i></a>
+		
+		<br><br>
+		</div>
+	</div>
+</div>
+
+
+<script>
+$("#challenge").mouseover(function(){
+	$("#hint").text("AGIL");
+});
+$("#challenge").mouseout(function(){
+	$("#hint").text("A*I*");
+});
+</script>
+
+
+<!-- JS containing all the solutions -->
+<script src="lib/my/solutions.js"></script>
+<script>var chapter = 0;</script>
+<script src="lib/my/game-mechanics.js"></script>
+
+<!-- 
+	Code Ends 
+-->
+
+	
+
+
+</body>
+</html>
