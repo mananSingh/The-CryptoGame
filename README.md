@@ -3,7 +3,7 @@
 Sudden Disappearance of a Cryptographer has led to a trail of mysterious Cipher clues. Investigate the Case - Riddles, Warnings and Secret messages - to uncover the reality and save those in danger.
 
 ###How to Run
-After downloading and extracting the folder, Just open "run.html" in any modern web browser, and enjoy the interactive story.
+After downloading and extracting the folder, Just open "index.html" in any modern web browser, and enjoy the interactive story.
 
 
 ###How to Play
