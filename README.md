@@ -18,9 +18,11 @@ This app uses In-Browser storage for saving your progress.
 Your progress will remain saved, even after you close the browser. And so, when you will reopen the application using the same browser, you will be able to resume from where you left.
 But, if you change the browser or delete in-browser storage, your progress will be lost.
 
+###Writer & Developer:
+Manan Singh
+
 ###Contact (Email Id):
 
 the.cryptogame@gmail.com
 
-Copyright (c) 2016 Contributors of The CryptoGame
 
